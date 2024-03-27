@@ -25,7 +25,25 @@
     - The model is a sequential model with the Kerastuner to decide the number of hidden layers, number of neurons, and activation functions.
     - A regularizer was added to the model to control the potential overfitting to the training data.
     - With the tuner search, the resulting model had an accuracy of 0.8817, which is higher than the ones for the previous two models.
-    - After fitting the model with the entire training data, it resulted in an accuracy of 0.8321 and a loss of 0.6092, much lower loss and accuracy.
+    - After building a model with the optimal hyperparameteres and fitting it with the training data, it resulted in an accuracy of 0.8321 and a loss of 0.6092, much lower loss and accuracy.
+
+## Points from Random Forest Model: Importance in Personality and Relatability
+
+- A quick description of the [feature importances graph](/graphs/feature_importances_top10.png)
+    - Features with the 'o' ending are the ratings from the participants' partners in the speed date.
+    - Features with the 'partner' ending are the participants' ratings of their partners in the speed date.
+    - The 'interests_correlate' feature is the correlation between the participant's and partner's ratings of interests.
+
+- From the top 10 features importances, we can infer that most, if not all, features below the **'like'** and **'guess_prob_liked'** effect the participant's decisions for the two features.
+- Looking at the scale of the graph, we can conclude that although there are differences in the importances of features, their overall impact or weight in the model are fairly minimal.
+- **Age**, **sex**, and **race** are **not considered important** when predicting a match between two people, although they are more important than the participant's field of study.
+- **Self evaluations** of the participants' personalities and hobbies are also relatively **unimportant**, which could infer that a matches are made from evaluating and observing others' traits rather than oneself.
+- Whether rating for their partner or vice versa, **shared interests** and **attrative**, **funny**, and **ambitious** features were most important in predicting a match between two people. Out of all the traits, **sincerity** and **intelligence** did not make the top 10. **Physical attraction** might be biologically impossible to dismiss as humans and **shared interests** follow a similar path, as humans are societal and love to be relatable. **Amusing** and **witty** traits are also important in predicting a match between two people, and that is unsurprising especially in a speed date setting where small talk with a little humor quickly lightens the mood and creates a more comfortable space to converse.
+- All of the features described above can be cumulatively determined by the **'like'** and **'guess_prob_liked'** features, as showing interest in one person usually does not come from one specific trait, but from a combination of their *personality*, *interests*, and other *undefinable* and *unique aspects of themselves*.
+
+## Conclusion
+
+Just have many shared interests with your partner and don't forget to be attractive, funny, and a little ambitious during the date. And one more thing: Be yourself, because that is not in the data and is the most important action to define yourself to another person.
 
 # References
 
